@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer= GetComponent<SpriteRenderer>();
         rBody= GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
+        sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
 
     }
 
@@ -37,24 +37,24 @@ public class PlayerController : MonoBehaviour
         if(horizontal < 0)
         {
             spriteRenderer.flipX = true;
-            //anim.SetBool("IsRunning", true);
+            anim.SetBool("IsRunning", true);
         }
 
         else if(horizontal > 0)
         {
             spriteRenderer.flipX = false;
-            //anim.SetBool("IsRunning", true);
+            anim.SetBool("IsRunning", true);
         }
 
         else
         {
-            //anim.SetBool("IsRunning", false);
+            anim.SetBool("IsRunning", false);
         }
 
         if(Input.GetButtonDown("Jump") && sensor.isGrounded)
         {
             rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            //anim.SetBool("IsJumping", true);
+            anim.SetBool("IsJumping", true);
         }
     }
         void FixedUpdate()
