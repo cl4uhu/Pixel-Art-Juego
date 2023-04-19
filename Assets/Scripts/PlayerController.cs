@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     // velocidad Purple
     public float playerSpeed = 5f;
     // salto Purple
-    public float jumpForce = 7f;
+    public float jumpForce = 8f;
     // texto consola
     string texto = "Welcome back Purple";
     private SpriteRenderer spriteRenderer;
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         rBody= GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
+        Debug.Log("Welcome back Purple");
 
     }
 
