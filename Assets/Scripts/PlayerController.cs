@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
         Debug.Log("Welcome back Purple");
         blackberriesmanager = GameObject.Find("BlackberriesManager").GetComponent<BlackberriesManager>();
-        cranberrysmanager = GameObject.Find("CranberrysManager").GetComponent<CranberrysManagers>();
+        cranberrysmanager = GameObject.Find("CranberrysManager").GetComponent<CranberrysManager>();
 
     }
 
@@ -69,12 +69,16 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "CollisionBerrys") 
+        if (collision.gameObject.tag == "CollisionBlackberries") 
         {
             BlackberriesManager blackberriesmanager = collision.gameObject.GetComponent<BlackberriesManager>();
+            blackberriesmanager.DestruccionBlackberries();
+        }
+
+        if (collision.gameObject.tag == "CollisionCberrys") 
+        {
             CranberrysManager cranberrysmanager = collision.gameObject.GetComponent<CranberrysManager>();
-            BlackberriesManager.DestruccionBlackberries();
-            CranberrysManager.DestruccionCranberrys();
+            cranberrysmanager.DestruccionCranberrys();
         }
     }
     

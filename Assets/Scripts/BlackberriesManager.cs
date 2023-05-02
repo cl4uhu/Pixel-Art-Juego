@@ -18,6 +18,6 @@ public class BlackberriesManager : MonoBehaviour
     {
         boxCollider.enabled = false; 
         Destroy(this.gameObject);
-        sfxManager.BlackberriesManager();
+        sfxManager.BlackberrieStock();
     }
 }

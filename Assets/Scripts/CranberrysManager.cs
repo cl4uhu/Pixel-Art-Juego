@@ -18,6 +18,6 @@ public class CranberrysManager : MonoBehaviour
     {
         boxCollider.enabled = false; 
         Destroy(this.gameObject);
-        sfxManager.CranberrysManager();
+        sfxManager.CranberryStock();
     }
 }
