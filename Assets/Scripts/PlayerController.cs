@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
             blackberriesmanager.DestruccionBlackberries();
         }
 
-        if (collision.gameObject.tag == "CollisionCberrys") 
+        if (collision.gameObject.tag == "CollisionCranberrys") 
         {
             CranberrysManager cranberrysmanager = collision.gameObject.GetComponent<CranberrysManager>();
             cranberrysmanager.DestruccionCranberrys();

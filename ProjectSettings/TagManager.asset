@@ -7,6 +7,9 @@ TagManager:
   - CollisionBerrys
   - CollisionCranberrys
   - CollisionBlackberries
+  - PurpleDeath
+  - Enemy
+  - Purple
   layers:
   - Default
   - TransparentFX

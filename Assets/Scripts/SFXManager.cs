@@ -6,6 +6,7 @@ public class SFXManager : MonoBehaviour
 {
     public AudioClip cranberrysstock;
     public AudioClip blackberriesstock;
+    public AudioClip purpleDeath;
 
     private AudioSource source;
     
@@ -16,14 +17,18 @@ public class SFXManager : MonoBehaviour
        source = GetComponent<AudioSource>(); 
     }
 
-     public void CranberryStock()
+    public void CranberryStock()
     {
         source.PlayOneShot(cranberrysstock);
     }
 
-     public void BlackberrieStock()
+    public void BlackberrieStock()
     {
         source.PlayOneShot(blackberriesstock);
     }
-
+    
+    public void PurpleDeath()
+    {
+        source.PlayOneShot(purpleDeath);
+    }
 }
