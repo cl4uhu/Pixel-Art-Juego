@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
+    public AudioClip cranberrysstock;
+    public AudioClip blackberriesstock;
+
+    private AudioSource source;
+    
     // Start is called before the first frame update
-    void Start()
+   
+    void Awake()
     {
-        
+       source = GetComponent<AudioSource>(); 
     }
 
-    // Update is called once per frame
-    void Update()
+     public void CranberryStock()
     {
-        
+        source.PlayOneShot(cranberrysstock);
     }
+
+     public void BlackberrieStock()
+    {
+        source.PlayOneShot(blackberriesstock);
+    }
+
 }

@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     float horizontal;
     //variable para acceder al Animator
     public Animator anim;
+    public BlackberriesManager blackberriesmanager;
+    public CranberrysManager cranberrysmanager;
 
 
     // Start is called before the first frame update
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         sensor = GameObject.Find("GroundSensor").GetComponent<GroundSensor>();
         Debug.Log("Welcome back Purple");
+        blackberriesmanager = GameObject.Find("BlackberriesManager").GetComponent<BlackberriesManager>();
+        cranberrysmanager = GameObject.Find("CranberrysManager").GetComponent<CranberrysManagers>();
 
     }
 
@@ -62,5 +66,17 @@ public class PlayerController : MonoBehaviour
     {
         rBody.velocity = new Vector2(horizontal * playerSpeed, rBody.velocity.y);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "CollisionBerrys") 
+        {
+            BlackberriesManager blackberriesmanager = collision.gameObject.GetComponent<BlackberriesManager>();
+            CranberrysManager cranberrysmanager = collision.gameObject.GetComponent<CranberrysManager>();
+            BlackberriesManager.DestruccionBlackberries();
+            CranberrysManager.DestruccionCranberrys();
+        }
+    }
+    
     }
 
