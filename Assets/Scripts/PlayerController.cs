@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public BlackberriesManager blackberriesmanager;
     public CranberrysManager cranberrysmanager;
+    GameManager gameManager;
+    Bullet bullet;
 
 
     // Start is called before the first frame update
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Welcome back Purple");
         blackberriesmanager = GameObject.Find("BlackberriesManager").GetComponent<BlackberriesManager>();
         cranberrysmanager = GameObject.Find("CranberrysManager").GetComponent<CranberrysManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        bullet = GameObject.Find("Bullet").GetComponent<Bullet>();
 
     }
 
@@ -60,6 +64,11 @@ public class PlayerController : MonoBehaviour
         {
             rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetBool("IsJumping", true);
+        }
+
+        if(Input.GetKeyDown(KeyCode.F) && gameManager.canShoot)
+        {
+            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         }
     }
         void FixedUpdate()

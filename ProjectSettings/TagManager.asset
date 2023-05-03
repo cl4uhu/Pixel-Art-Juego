@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Purple
   - PowerUp
+  - Bullet
   layers:
   - Default
   - TransparentFX
