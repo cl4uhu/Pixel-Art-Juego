@@ -10,6 +10,7 @@ TagManager:
   - PurpleDeath
   - Enemy
   - Purple
+  - PowerUp
   layers:
   - Default
   - TransparentFX
