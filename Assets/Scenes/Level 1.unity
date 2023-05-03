@@ -2201,6 +2201,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   blackberriesmanager: {fileID: 0}
   cranberrysmanager: {fileID: 0}
+  bulletPrefab: {fileID: 4381292005606773995, guid: d2f58b962b0a4274b971af699d448a12, type: 3}
+  bulletSpawn: {fileID: 1340862237}
 --- !u!95 &1819736423
 Animator:
   serializedVersion: 4
