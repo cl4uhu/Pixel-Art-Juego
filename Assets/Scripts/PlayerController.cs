@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
     public BlackberriesManager blackberriesmanager;
     public CranberrysManager cranberrysmanager;
     GameManager gameManager;
-    Bullet bullet;
-
+    Bullet bulletPrefab;
+    public float bulletSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         blackberriesmanager = GameObject.Find("BlackberriesManager").GetComponent<BlackberriesManager>();
         cranberrysmanager = GameObject.Find("CranberrysManager").GetComponent<CranberrysManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        bullet = GameObject.Find("Bullet").GetComponent<Bullet>();
+        bulletPrefab = GameObject.Find("Bullet").GetComponent<Bullet>();
 
     }
 
