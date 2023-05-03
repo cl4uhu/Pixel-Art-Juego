@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody2D rBody2D;
     GameManager gameManager;
+    Collider2D collider2D;
 
     public float bulletSpeed = 5;
 
