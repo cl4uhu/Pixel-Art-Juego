@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+            
         }
     }
         void FixedUpdate()
