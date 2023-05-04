@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         boxCollider.enabled = false; 
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 0f);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
