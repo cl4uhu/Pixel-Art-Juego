@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2e9e041c0bc138547a18bbbc15a09f56
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bhineka
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b178607536343904da5b1d6b986adc8a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
