@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour
 
     public void MenuGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void MusicVolume(float value)
