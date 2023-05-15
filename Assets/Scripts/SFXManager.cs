@@ -7,6 +7,7 @@ public class SFXManager : MonoBehaviour
     public AudioClip cranberrysstock;
     public AudioClip blackberriesstock;
     public AudioClip purpleDeath;
+    public AudioClip honeystock;
 
     private AudioSource source;
     
@@ -30,5 +31,10 @@ public class SFXManager : MonoBehaviour
     public void PurpleDeath()
     {
         source.PlayOneShot(purpleDeath);
+    }
+
+    public void HoneyStock()
+    {
+        source.PlayOneShot(honeystock);
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Purple
   - PowerUp
   - Bullet
+  - CollisionHoney
   layers:
   - Default
   - TransparentFX
