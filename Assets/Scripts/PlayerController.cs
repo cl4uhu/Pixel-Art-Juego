@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
+    public Level2Manager level2Manager;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +96,12 @@ public class PlayerController : MonoBehaviour
         {
             HoneyManager honeymanager = collision.gameObject.GetComponent<HoneyManager>();
             honeymanager.DestruccionHoney();
+        }
+
+        if (collision.gameObject.tag == "Level2Collision") 
+        {
+            Level2Manager level2Manager = collision.gameObject.GetComponent<Level2Manager>();
+            level2Manager.Level2Tocado();
         }
     }
     
