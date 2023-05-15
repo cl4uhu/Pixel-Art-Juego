@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public BlackberriesManager blackberriesmanager;
     public CranberrysManager cranberrysmanager;
+    public HoneyManager honeymanager;
     GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
@@ -88,6 +89,12 @@ public class PlayerController : MonoBehaviour
         {
             CranberrysManager cranberrysmanager = collision.gameObject.GetComponent<CranberrysManager>();
             cranberrysmanager.DestruccionCranberrys();
+        }
+
+        if (collision.gameObject.tag == "CollisionHoney") 
+        {
+            HoneyManager honeymanager = collision.gameObject.GetComponent<HoneyManager>();
+            honeymanager.DestruccionHoney();
         }
     }
     
