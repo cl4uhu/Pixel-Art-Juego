@@ -171,6 +171,7 @@ MonoBehaviour:
   cranberrysstock: {fileID: 8300000, guid: 760860abffe67b4419034cb95ba1598f, type: 3}
   blackberriesstock: {fileID: 8300000, guid: e7fdf24d4d6b04d4a94effa0ea86fa34, type: 3}
   purpleDeath: {fileID: 8300000, guid: 8d10d9ef8be7d6247bd955099e7e1c84, type: 3}
+  honeystock: {fileID: 0}
 --- !u!82 &115906784
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2167,6 +2168,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   blackberriesmanager: {fileID: 0}
   cranberrysmanager: {fileID: 0}
+  honeymanager: {fileID: 0}
   bulletPrefab: {fileID: 4381292005606773995, guid: d2f58b962b0a4274b971af699d448a12, type: 3}
   bulletSpawn: {fileID: 1340862237}
 --- !u!95 &1819736423
