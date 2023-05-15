@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class DeathZone : MonoBehaviour
             Destroy(collider.gameObject);
             sfxManager.PurpleDeath();
             soundManager.StopBGM();
+            SceneManager.LoadScene(3);
         }
     }
 }
